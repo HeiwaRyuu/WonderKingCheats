@@ -5,4 +5,4 @@ I'm Adding the first one being a teleport/fly hack, so you can teleport instead 
 
 Showcase Video of the Fly Hack down below:
 https://youtu.be/RXuNAP0ErP0
-[![WonderKing Fly Hack Demo](https://imgur.com/a/pyOEs8q)](https://youtu.be/RXuNAP0ErP0)
+[![WonderKing Fly Hack Demo](https://i.imgur.com/6i3VqAJ.png)](https://youtu.be/RXuNAP0ErP0)

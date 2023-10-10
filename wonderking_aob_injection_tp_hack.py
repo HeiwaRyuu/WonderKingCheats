@@ -1,9 +1,6 @@
 import pymem
-import os
-import pydirectinput
 import keyboard
 import time
-import threading
 
 def aob_injection(process, aob):
     
@@ -25,6 +22,7 @@ def aob_injection(process, aob):
         new_value = current_value + move_char_x
         pm.write_int(aob_address_x, new_value)
         print("tp_right")
+
     def tp_left():
         current_value = pm.read_int(aob_address_x)
         new_value = current_value - move_char_x
@@ -89,6 +87,8 @@ def aob_injection(process, aob):
             continue
     
 
-aob = rb"\x78\x04\x6C\x01\x00\x00\x00\x00\x00\x00\x40\x40\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x40\x40\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3F\x00\x00\x80\x3F\x68\x01\x00\x00\xFF\x00\x00\x00\xFF\x00\x00\x00\xFF\x00\x00\x00..\x00\x00..\x00\x00..\x00\x00..\x00\x00..\x00\x00..\x00\x00..\x00\x00..\x00\x00..\x00\x00"
+aob = rb"\x78\x04..\x00\x00\x00\x00\x00\x00\x40\x40\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x40\x40\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\x3F\x00\x00\x80\x3F\x68\x01\x00\x00\xFF\x00\x00\x00\xFF\x00\x00\x00\xFF\x00\x00\x00..\x00\x00..\x00\x00..\x00\x00..\x00\x00..\x00\x00..\x00\x00..\x00\x00..\x00\x00..\x00\x00"
+
+##  78 04 ?? ?? 00 00 00 00 00 00 40 40 00 00 00 00 00 00 00 00 00 00 40 40 02 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 80 3F 68 01 00 00 FF 00 00 00 FF 00 00 00 FF 00 00 00 ?? ?? 00 00 ?? ?? 00 00 ?? ?? 00 00 ?? ?? 00 00 ?? ?? 00 00 ?? ?? 00 00 ?? ?? 00 00 ?? ?? 00 00 ?? ?? 00 00
 
 aob_injection("WonderKing.exe", aob)

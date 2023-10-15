@@ -2,7 +2,7 @@
 
 <p>
 This is a repository of cheats/hacks i've created for WonderKing Korean Server Game.
-The first one is a Teleport/Fly Hack, so you can teleport instead of walk in the game.
+The first one is a Teleport/Fly Hack.
 </p>
 
 <p>
